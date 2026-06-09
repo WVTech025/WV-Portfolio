@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Your Hybrid Expertise</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay loop muted playsinline class="back-video">
+            <source src="videos/background03.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <nav>
+        <div class="logo">WV<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="#contact" class="btn-contact">Let's Talk</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content hidden">
+            <span class="badge">Case Studies in Impact & Efficiency</span>
+            <h1>My <span class="gradient-text">Hybrid Portfolio:</span> Tech Solves, Marketing Sells.</h1>
+            <p>
+                Showcasing results from high-performing digital campaigns and critical system stabilization projects.
+            </p>
+        </div>
+    </section>
+
+    <section class="section section-portfolio">
+        <h2 class="section-title hidden">Selected Works</h2>
+
+        <div class="project-item hidden">
+            <div class="project-image-placeholder">
+                <img src="images/social-dashboard.png" alt="Social Media Contents">
+            </div>
+            <div class="glass-card project-details">
+                <span class="badge">Digital Marketing Focus</span>
+                <h3>Creative Deisgns For Social Media</h3>
+                <div class="project-meta">
+                    <span><i class="fas fa-chart-line" style="color: var(--accent);"></i> Skills: Facebook Ads, SEO, A/B Testing, Funnel Mapping</span>
+                    <span><i class="fas fa-tag" style="color: var(--accent);"></i> Metrics: 4.5x ROAS</span>
+                </div>
+                <a href="#" class="btn-secondary" style="margin-top: 0.5rem;">View Detailed Strategy</a>
+            </div>
+        </div>
+
+        <div class="project-item hidden reverse-layout">
+            <div class="project-image-placeholder">
+                <img src="images/server-room.png" alt="Clean server rack with blinking lights">
+            </div>
+            <div class="glass-card project-details">
+                <span class="badge">Video Editing & Content Production</span>
+                <div class="project-meta">
+                    <span><i class="fas fa-ticket" style="color: var(--accent);"></i> Skills: Premiere Pro, After Effects, CapCut, Canva </span>
+                    <span><i class="fas fa-clock" style="color: var(--accent);"></i> Platforms: Facebook, Instagram, TikTok, YouTube</span>
+                </div>
+                <a href="#" class="btn-secondary" style="margin-top: 1.5rem;">See Process Documentation</a>
+            </div>
+        </div>
+
+        <div class="project-item hidden">
+            <div class="project-image-placeholder">
+                <img src="images/organic-growth.png" alt="Animated graph showing organic traffic growth">
+            </div>
+            <div class="glass-card project-details">
+                <span class="badge">AI Tools for Content Creation</span>
+                <div class="project-meta">
+                    <span><i class="fas fa-brain" style="color: var(--accent);"></i>Tools: Veo3, NanoBanana, ElevenLabs, ChatGPT, Kling, Sora, Ideogram, Claude (Anthropic), Gemini (Google), Perplexity AI</span>
+                    <span><i class="fas fa-user-tie" style="color: var(--accent);"></i> Platforms: Facebook, Instagram, TikTok, YouTube</span>
+                </div>
+                <a href="#" class="btn-secondary" style="margin-top: 1.5rem;">View Campaign Samples</a>
+            </div>
+        </div>
+
+    </section>
+
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">WV<span>.</span></div>
+                <p>Bridging the gap between complex Tech and creative Media.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+           <div class="footer-col">
+    <h3>Contact Info</h3>
+    <p>Location: Colombo, LK</p>
+    <p>Email: <a href="mailto:vilochanawerosh0@gmail.com" style="color: inherit; text-decoration: none;">vilochanawerosh0@gmail.com</a></p>
+    <p>Phone: <a href="tel:+94761617451" style="color: inherit; text-decoration: none;">+94761 617 451</a></p>
+</div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 WV. All rights reserved.
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, {
+                threshold: 0.2, 
+            });
+
+            const hiddenElements = document.querySelectorAll('.hidden');
+            hiddenElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
